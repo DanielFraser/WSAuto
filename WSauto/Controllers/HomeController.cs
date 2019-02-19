@@ -37,7 +37,7 @@ namespace WSauto.Controllers
         public JsonResult getProducts(string prefix)
         {
             ProductsSoapClient psc = new ProductsSoapClient();
-            return Json(psc.names(prefix), JsonRequestBehavior.AllowGet);
+            return Json(psc.getNames(prefix), JsonRequestBehavior.AllowGet);
         }
     }
 }
