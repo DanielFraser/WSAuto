@@ -12,17 +12,17 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="names">
+      <s:element name="getNames">
         <s:complexType>
           <s:sequence>
             <s:element minOccurs="0" maxOccurs="1" name="prefix" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="namesResponse">
+      <s:element name="getNamesResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="namesResult" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="getNamesResult" type="tns:ArrayOfString" />
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -39,20 +39,20 @@
   <wsdl:message name="HelloWorldSoapOut">
     <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
   </wsdl:message>
-  <wsdl:message name="namesSoapIn">
-    <wsdl:part name="parameters" element="tns:names" />
+  <wsdl:message name="getNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:getNames" />
   </wsdl:message>
-  <wsdl:message name="namesSoapOut">
-    <wsdl:part name="parameters" element="tns:namesResponse" />
+  <wsdl:message name="getNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:getNamesResponse" />
   </wsdl:message>
   <wsdl:portType name="ProductsSoap">
     <wsdl:operation name="HelloWorld">
       <wsdl:input message="tns:HelloWorldSoapIn" />
       <wsdl:output message="tns:HelloWorldSoapOut" />
     </wsdl:operation>
-    <wsdl:operation name="names">
-      <wsdl:input message="tns:namesSoapIn" />
-      <wsdl:output message="tns:namesSoapOut" />
+    <wsdl:operation name="getNames">
+      <wsdl:input message="tns:getNamesSoapIn" />
+      <wsdl:output message="tns:getNamesSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="ProductsSoap" type="tns:ProductsSoap">
@@ -66,8 +66,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="names">
-      <soap:operation soapAction="http://tempuri.org/names" style="document" />
+    <wsdl:operation name="getNames">
+      <soap:operation soapAction="http://tempuri.org/getNames" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -87,8 +87,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="names">
-      <soap12:operation soapAction="http://tempuri.org/names" style="document" />
+    <wsdl:operation name="getNames">
+      <soap12:operation soapAction="http://tempuri.org/getNames" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

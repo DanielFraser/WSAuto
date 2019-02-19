@@ -205,7 +205,7 @@
     <Content Include="Connected Services\ProdReference\WSauto.ProdReference.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ProdReference\WSauto.ProdReference.namesResponse.datasource">
+    <Content Include="Connected Services\ProdReference\WSauto.ProdReference.getNamesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

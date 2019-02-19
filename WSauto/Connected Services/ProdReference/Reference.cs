@@ -32,11 +32,11 @@ namespace WSauto.ProdReference {
         System.Threading.Tasks.Task<WSauto.ProdReference.HelloWorldResponse> HelloWorldAsync(WSauto.ProdReference.HelloWorldRequest request);
         
         // CODEGEN: Generating message contract since element name prefix from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/names", ReplyAction="*")]
-        WSauto.ProdReference.namesResponse names(WSauto.ProdReference.namesRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getNames", ReplyAction="*")]
+        WSauto.ProdReference.getNamesResponse getNames(WSauto.ProdReference.getNamesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/names", ReplyAction="*")]
-        System.Threading.Tasks.Task<WSauto.ProdReference.namesResponse> namesAsync(WSauto.ProdReference.namesRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getNames", ReplyAction="*")]
+        System.Threading.Tasks.Task<WSauto.ProdReference.getNamesResponse> getNamesAsync(WSauto.ProdReference.getNamesRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -104,15 +104,15 @@ namespace WSauto.ProdReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class namesRequest {
+    public partial class getNamesRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="names", Namespace="http://tempuri.org/", Order=0)]
-        public WSauto.ProdReference.namesRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getNames", Namespace="http://tempuri.org/", Order=0)]
+        public WSauto.ProdReference.getNamesRequestBody Body;
         
-        public namesRequest() {
+        public getNamesRequest() {
         }
         
-        public namesRequest(WSauto.ProdReference.namesRequestBody Body) {
+        public getNamesRequest(WSauto.ProdReference.getNamesRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -121,15 +121,15 @@ namespace WSauto.ProdReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class namesRequestBody {
+    public partial class getNamesRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
         public string prefix;
         
-        public namesRequestBody() {
+        public getNamesRequestBody() {
         }
         
-        public namesRequestBody(string prefix) {
+        public getNamesRequestBody(string prefix) {
             this.prefix = prefix;
         }
     }
@@ -138,15 +138,15 @@ namespace WSauto.ProdReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class namesResponse {
+    public partial class getNamesResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="namesResponse", Namespace="http://tempuri.org/", Order=0)]
-        public WSauto.ProdReference.namesResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getNamesResponse", Namespace="http://tempuri.org/", Order=0)]
+        public WSauto.ProdReference.getNamesResponseBody Body;
         
-        public namesResponse() {
+        public getNamesResponse() {
         }
         
-        public namesResponse(WSauto.ProdReference.namesResponseBody Body) {
+        public getNamesResponse(WSauto.ProdReference.getNamesResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -155,16 +155,16 @@ namespace WSauto.ProdReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class namesResponseBody {
+    public partial class getNamesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public WSauto.ProdReference.ArrayOfString namesResult;
+        public WSauto.ProdReference.ArrayOfString getNamesResult;
         
-        public namesResponseBody() {
+        public getNamesResponseBody() {
         }
         
-        public namesResponseBody(WSauto.ProdReference.ArrayOfString namesResult) {
-            this.namesResult = namesResult;
+        public getNamesResponseBody(WSauto.ProdReference.ArrayOfString getNamesResult) {
+            this.getNamesResult = getNamesResult;
         }
     }
     
@@ -219,28 +219,28 @@ namespace WSauto.ProdReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WSauto.ProdReference.namesResponse WSauto.ProdReference.ProductsSoap.names(WSauto.ProdReference.namesRequest request) {
-            return base.Channel.names(request);
+        WSauto.ProdReference.getNamesResponse WSauto.ProdReference.ProductsSoap.getNames(WSauto.ProdReference.getNamesRequest request) {
+            return base.Channel.getNames(request);
         }
         
-        public WSauto.ProdReference.ArrayOfString names(string prefix) {
-            WSauto.ProdReference.namesRequest inValue = new WSauto.ProdReference.namesRequest();
-            inValue.Body = new WSauto.ProdReference.namesRequestBody();
+        public WSauto.ProdReference.ArrayOfString getNames(string prefix) {
+            WSauto.ProdReference.getNamesRequest inValue = new WSauto.ProdReference.getNamesRequest();
+            inValue.Body = new WSauto.ProdReference.getNamesRequestBody();
             inValue.Body.prefix = prefix;
-            WSauto.ProdReference.namesResponse retVal = ((WSauto.ProdReference.ProductsSoap)(this)).names(inValue);
-            return retVal.Body.namesResult;
+            WSauto.ProdReference.getNamesResponse retVal = ((WSauto.ProdReference.ProductsSoap)(this)).getNames(inValue);
+            return retVal.Body.getNamesResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WSauto.ProdReference.namesResponse> WSauto.ProdReference.ProductsSoap.namesAsync(WSauto.ProdReference.namesRequest request) {
-            return base.Channel.namesAsync(request);
+        System.Threading.Tasks.Task<WSauto.ProdReference.getNamesResponse> WSauto.ProdReference.ProductsSoap.getNamesAsync(WSauto.ProdReference.getNamesRequest request) {
+            return base.Channel.getNamesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<WSauto.ProdReference.namesResponse> namesAsync(string prefix) {
-            WSauto.ProdReference.namesRequest inValue = new WSauto.ProdReference.namesRequest();
-            inValue.Body = new WSauto.ProdReference.namesRequestBody();
+        public System.Threading.Tasks.Task<WSauto.ProdReference.getNamesResponse> getNamesAsync(string prefix) {
+            WSauto.ProdReference.getNamesRequest inValue = new WSauto.ProdReference.getNamesRequest();
+            inValue.Body = new WSauto.ProdReference.getNamesRequestBody();
             inValue.Body.prefix = prefix;
-            return ((WSauto.ProdReference.ProductsSoap)(this)).namesAsync(inValue);
+            return ((WSauto.ProdReference.ProductsSoap)(this)).getNamesAsync(inValue);
         }
     }
 }
